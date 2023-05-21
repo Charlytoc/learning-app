@@ -1,0 +1,85 @@
+.container {
+    min-height: 100vh;
+}
+.center-content {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.center-content > * {
+    margin: 0 auto;
+}
+.flex-direction-column {
+    flex-direction: column;
+}
+.font-wow-blue {
+    font-family: var(--font-wow);
+    text-shadow: 0 0 50px var(--color-blue),0 0 5px var(--color-green-aqua);
+    color:transparent;
+    background: linear-gradient(var(--color-green), var(--color-blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.font-wow-white {
+    font-family: var(--font-wow);
+    text-shadow: 0 0 10px var(--color-gray), 0 0 20px black, 0 0 30px black, 0 0 50px white;
+}
+.button-block {
+    display: block;
+    padding: 14px;
+    position: relative;
+    z-index: 4;
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--font-wow);
+    border-left: 0;
+    border-right: 0;
+    /* box-shadow: 0px 0px 10px white; */
+}
+.button-block::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border: 0;
+    border-bottom: 0;
+    border-left: 0;
+    z-index: 2;
+    mix-blend-mode: overlay;
+    cursor: pointer;
+}
+
+.button-block:hover::after {
+    background: linear-gradient(0, #20c991, #20a7c9);
+    height: 100%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    
+    transition: all 500ms ease-in-out;
+}
+.button-block::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    border: 0px solid #20a7c9;
+    border-top: 0;
+    border-right: 0;
+    mix-blend-mode: saturation;
+}
+
+.button-block:hover::before {
+    background: linear-gradient(0, #20c991, #20a7c9);
+    height: 100%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: all 500ms ease-in-out;
+}
+.button-block:active {
+    box-shadow: 0px 0px 10px var(--color-green-aqua);
+}

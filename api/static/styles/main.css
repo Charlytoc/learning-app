@@ -1,0 +1,36 @@
+:root {
+    --color-blue: #20a2b3;
+    --color-green-aqua: #20b393;
+    --color-green: #29ac84;
+    --color-pink: #da19e0;
+    --color-gray: #838383;
+    --font-wow: 'Lora', serif;
+    --font-readable: 'Nunito', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    
+}
+html {
+    color-scheme: dark;
+}
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: var(--font-readable);
+    font-weight: 800;
+}
+h1 {
+    font-size: 3rem;
+}
+p {
+    font-size: 1.6rem;
+}
+button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 0;
+}
