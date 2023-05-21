@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-
+from .views import view_homepage
 
 apps = [
     ('auth/', 'api.authenticate.urls', 'auth'),
@@ -28,6 +28,7 @@ urlpatterns_apps = [path(url, include(urlconf, namespace=namespace)) for url, ur
 
 urlpatterns_django = [
     path('admin/', admin.site.urls),
+    path('', view_homepage),
 ]
 
 urlpatterns_static = static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
