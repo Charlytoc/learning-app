@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from .aitools.views import run_home_agent
+from .aitools.views import run_home_agent, playground
 
 apps = [
     ('auth/', 'api.authenticate.urls', 'auth'),
@@ -29,6 +29,7 @@ urlpatterns_apps = [path(url, include(urlconf, namespace=namespace)) for url, ur
 urlpatterns_django = [
     path('admin/', admin.site.urls),
     path('', run_home_agent),
+    path('playground', playground),
 ]
 
 urlpatterns_static = static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

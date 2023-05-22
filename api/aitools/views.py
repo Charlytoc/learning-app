@@ -4,3 +4,8 @@ from django.shortcuts import render
 def run_home_agent(request):
     
     return render(request, 'home.html')
+
+
+def playground(request):
+    
+    return render(request, 'playground.html')

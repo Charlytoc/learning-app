@@ -12,9 +12,9 @@ RUN pip install -r requirements.txt
 
 # Copy the rest of the application code to the container
 COPY . .
+RUN python manage.py migrate
 
 # Expose the port that the Django app will run on
 EXPOSE 8000
 
-# Run the Django development server
-CMD ["bash", "start-dev.sh"]
+CMD ["python", "manage.py", "runserver"]

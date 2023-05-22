@@ -1,25 +1,14 @@
 .container {
     min-height: 100vh;
+    position: relative;
 }
-.center-content {
+.flex-center {
     align-items: center;
     justify-content: center;
     display: flex;
 }
-.center-content > * {
-    margin: 0 auto;
-}
 .flex-direction-column {
     flex-direction: column;
-}
-.font-wow-blue {
-    font-family: var(--font-wow);
-    text-shadow: 0 0 50px var(--color-blue),0 0 5px var(--color-green-aqua);
-    color:transparent;
-    background: linear-gradient(var(--color-green), var(--color-blue));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 .font-wow-white {
     font-family: var(--font-wow);
@@ -32,7 +21,7 @@
     z-index: 4;
     text-decoration: none;
     color: inherit;
-    font-family: var(--font-wow);
+    font-family: var(--font-readable);
     border-left: 0;
     border-right: 0;
     /* box-shadow: 0px 0px 10px white; */
@@ -44,7 +33,7 @@
     right: 0;
     width: 50%;
     height: 50%;
-    border: 0;
+    border: 1px solid var(--color-blue);
     border-bottom: 0;
     border-left: 0;
     z-index: 2;
@@ -57,7 +46,7 @@
     height: 100%;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    
+    border: 0;
     transition: all 500ms ease-in-out;
 }
 .button-block::before {
@@ -67,10 +56,11 @@
     left: 0;
     width: 50%;
     height: 50%;
-    border: 0px solid #20a7c9;
+    border: 1px solid var(--color-green-aqua);
     border-top: 0;
     border-right: 0;
     mix-blend-mode: saturation;
+    cursor: pointer;
 }
 
 .button-block:hover::before {
@@ -79,7 +69,33 @@
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     transition: all 500ms ease-in-out;
+    border: 0;
 }
 .button-block:active {
     box-shadow: 0px 0px 10px var(--color-green-aqua);
+}
+.full-vh {
+    height: 100vh !important;
+}
+.w-full {
+    width: 100%;
+}
+.flex-full {
+    display: flex;
+}
+.flex-full > * {
+    flex-grow: 1;
+}
+.button-gray-coral {
+    background-color: var(--gray-600);
+    flex-grow: 1;
+    font-weight: 600;
+}
+.button-gray-coral:hover, .button-gray-coral:active, .button-gray-coral:focus {
+    background-color: lightcoral;
+    outline: 0;
+    cursor: pointer;
+}
+.h-full {
+    height: 100%;
 }

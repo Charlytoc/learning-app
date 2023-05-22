@@ -4,6 +4,16 @@
     --color-green: #29ac84;
     --color-pink: #da19e0;
     --color-gray: #838383;
+    --gray-100: rgba(128, 128, 128, 0.1);
+    --gray-200: rgba(128, 128, 128, 0.2);
+    --gray-300: rgba(128, 128, 128, 0.3);
+    --gray-400: rgba(128, 128, 128, 0.4);
+    --gray-500: rgba(128, 128, 128, 0.5);
+    --gray-600: rgba(128, 128, 128, 0.6);
+    --gray-700: rgba(128, 128, 128, 0.7);
+    --gray-800: rgba(128, 128, 128, 0.8);
+    --gray-900: rgba(128, 128, 128, 0.9);
+    --gray-1000: rgba(128, 128, 128, 1);
     --font-wow: 'Lora', serif;
     --font-readable: 'Nunito', sans-serif;
 }
@@ -24,13 +34,32 @@ body {
 }
 h1 {
     font-size: 3rem;
+    text-align: center;
 }
-p {
+h2 {
     font-size: 1.6rem;
+    text-align: center;
+}
+p, a {
+    font-size: 1.2rem;
+    font-family: var(--font-readable);
 }
 button {
     padding: 10px;
     border-radius: 5px;
     background-color: transparent;
     border: 0;
+    font-family: var(--font-readable);
+}
+input {
+    border: 1px solid var(--gray-300);
+    padding: 3px;
+    font-family: var(--font-readable);
+    border-radius: 4px;
+    flex-grow: 1;
+    font-weight: 600;
+}
+input:hover, input:active, input:focus {
+    outline: none;
+    border: 1px solid lightcoral;
 }
